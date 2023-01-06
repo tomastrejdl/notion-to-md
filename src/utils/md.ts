@@ -57,7 +57,10 @@ export const callout = (text: string, icon?: CalloutIcon) => {
   }
 
   // the replace is done to handle multiple lines
-  return `> ${emoji ? emoji + " " : ""}${text.replace(/\n/g, "  \n> ")}`;
+  return `<aside> ${emoji ? emoji + ' ' : ''}${text.replace(
+    /\n/g,
+    '  \n '
+  )}</aside>`
 };
 
 export const bullet = (text: string, count?: number) => {
